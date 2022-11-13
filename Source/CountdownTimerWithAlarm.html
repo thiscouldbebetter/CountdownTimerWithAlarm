@@ -1,0 +1,86 @@
+<html>
+
+<body onkeydown="UiEventHandler.body_KeyDown(event)">
+
+<div id="divUi">
+	<h3>Countdown Timer with Alarm</h3>
+
+	<p>
+		Click the buttons or the indicated hotkeys to start a countdown.
+		When the countdown is elapsed,
+		an audio and visual alarm will be activated.
+	</p>
+
+	<div>
+		<label>Time Remaining:</label>
+		<input id="inputTimeRemaining" disabled=true ></input>
+	</div>
+
+	<div>
+		<label>Change Time Remaining:</label>
+		<br />
+
+		<div>
+			<button onmousedown="UiEventHandler.buttonTimeRemainingReset_Clicked();">Reset (Delete)</button>
+
+			<button onmousedown="UiEventHandler.buttonTimeRemainingSubtract5Minutes_Clicked();">
+				-5m
+			</button>
+
+			<button onmousedown="UiEventHandler.buttonTimeRemainingSubtract1Minute_Clicked();">
+				-1m (-)
+			</button>
+
+			<button onmousedown="UiEventHandler.buttonTimeRemainingSubtract10Seconds_Clicked();">
+				-10s
+			</button>
+
+			<button onmousedown="UiEventHandler.buttonTimeRemainingSubtract1Second_Clicked();">
+				-1s (Alt--)
+			</button>
+
+			<button onmousedown="UiEventHandler.buttonTimeRemainingAdd1Second_Clicked();">
+				+1s (Alt-+)
+			</button>
+
+			<button onmousedown="UiEventHandler.buttonTimeRemainingAdd10Seconds_Clicked();">
+				+10s
+			</button>
+
+			<button onmousedown="UiEventHandler.buttonTimeRemainingAdd1Minute_Clicked();">
+				+1m (+)
+			</button>
+
+			<button onmousedown="UiEventHandler.buttonTimeRemainingAdd5Minutes_Clicked();">
+				+5m
+			</button>
+
+		</div>
+
+	</div>
+
+	<button onmousedown="UiEventHandler.buttonStartPause_Clicked();">
+		Start/Pause Timer (Enter/Space)
+	</button>
+	
+	<div>
+		<label>Alarm:</label>
+		<button onmousedown="UiEventHandler.buttonAlarmTest_Clicked();">Test</button>
+		<button onmousedown="UiEventHandler.buttonAlarmDismiss_Clicked();">Dismiss (Esc)</button>
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="Alarm.js"></script>
+<script type="text/javascript" src="CountdownTimer.js"></script>
+<script type="text/javascript" src="CountdownTimerRunner.js"></script>
+<script type="text/javascript" src="SoundPlayer.js"></script>
+<script type="text/javascript" src="TimeHelper.js"></script>
+<script type="text/javascript" src="UiEventHandler.js"></script>
+
+<script type="text/javascript">
+CountdownTimerRunner.Instance();
+</script>
+
+</body>
+</html>
