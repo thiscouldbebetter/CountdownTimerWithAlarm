@@ -1,6 +1,6 @@
 CountdownTimerWithAlarm
 =======================
 
-A countdown timer with an alrm implemented in JavaScript.
+A countdown timer with an alarm implemented in JavaScript.
 
 <img src="Screenshot.png" />
